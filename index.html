@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>TTPD Downloader</title></head>
+<body style="text-align:center;padding:60px 20px;font-family:Georgia,serif;background:#FAF5ED">
+<h2 style="color:#3C2A1E">📥 TTPD Song Ranker</h2>
+<p style="color:#9B8573">点击按钮下载完整 HTML 文件</p>
+<button onclick="d()" style="padding:16px 40px;font-size:1.2rem;background:#3C2A1E;color:#FAF5ED;border:none;border-radius:12px;cursor:pointer">⬇ 下载 TTPD_Song_Ranker.html</button>
+<p style="color:#9B8573;font-size:0.8rem;margin-top:20px">Created by TSPudding 🍮</p>
+<script>
+async function d(){
+  const r=await fetch("https://app.lobehub.com/f/file_q5Cvsg9ed9FN");
+  const t=await r.text();
+  const b=new Blob([t],{type:"text/html"});
+  const a=document.createElement("a");
+  a.href=URL.createObjectURL(b);
+  a.download="TTPD_Song_Ranker.html";
+  a.click();
+}
+</script>
+</body></html>
